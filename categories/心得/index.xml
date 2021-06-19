@@ -8,12 +8,13 @@
     <language>zh-tw</language>
     <lastBuildDate>Sat, 19 Jun 2021 10:07:47 +0600</lastBuildDate><atom:link href="https://jimchien666.github.io/categories/%E5%BF%83%E5%BE%97/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>佳恩部落格設定</title>
+      <title>個人網站的誕生（一）</title>
       <link>https://jimchien666.github.io/blog/post-1/</link>
       <pubDate>Sat, 19 Jun 2021 10:07:47 +0600</pubDate>
       
       <guid>https://jimchien666.github.io/blog/post-1/</guid>
-      <description>Heading 1 Heading 2 Heading 3 Heading 4 Heading 5 Heading 6 Emphasis Emphasis, aka italics, with asterisks or underscores.</description>
+      <description>埋下種子 其實在我剛接觸程式的時候，我就希望自己將來能夠有一個自己的網站，但那時候的我還對網頁一點概念都沒有，只知道網頁是由HTML+CSS所構成，別說一個網站，當時的我就連要寫出一個導覽列，選項也都沒辦法按照自己的想法排列。 而當時，家裡的網站因為太過老舊，有些圖樣顯示不出來，媽媽希望我們家裡兩兄弟能把網站翻新，當初那個網站是表哥設計的，那表哥也非常好心的來家裡跟我們說明大概要怎麼做，雖然聽得很模糊，但摸著摸著也摸出一些規律，於是在兩人合力下第一次修改了第一個網站。
+淡忘 當時這個修改網站給了我很大的信心，雖然當時九成都是我哥在弄的，但對於一個沒碰過網頁的人來說，這是一個很棒的經驗，但這並沒有讓我開始著手自己的網站，我還是覺得自己不可能做出一個能放上檯面的東西，然後這個想法在課業及實習的忙碌下漸漸淡忘，在實習的這段期間，我接觸了網頁爬蟲，當時覺得爬蟲超酷的，不僅能把別人網站的內容抓下來，再抓下來的同時，還能把抓下來的資料，整理成自己想要的樣子。這段時間，我開始投入學習網頁爬蟲的相關知識，也買了不少的線上課程，包含網頁基礎概念HTML和CSS，當時學習是為了爬蟲，沒想到，在一段時間後，這些基礎又悄悄的孕育了我的網頁之路。</description>
     </item>
     
   </channel>
