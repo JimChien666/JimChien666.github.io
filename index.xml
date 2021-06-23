@@ -35,5 +35,16 @@
 OK！終於要開始做自己的網站了吧，現在的我確實有能力做出一個網站了，那我要做出一個什麼樣的網站呢&amp;hellip;咦！這時的我發現一件事，我不知道我要做什麼樣的網站，原來當時的我，只是抱有一個想法，沒有實際的樣子，而這個空空的想法，卻持續推動著我持續不斷的學習，哈哈，真有趣。 為了填補這個空空的想法，我開始想我需要什麼樣的功能，恩&amp;hellip;後來覺得不如我把這件有趣的事情分享出來好了，喔對，那我來做一個部落格吧，於是又在線上找到一個架設部落格的課程，於是，這個網頁誕生了，繞了這麼一大圈，才發現，我要的功能其實很簡單，也不需要很多很難的技術，然而呢，我前面學到的那些技術，卻是讓我在求職上更順利，也讓我找到一份自己滿喜歡的工作，算是因禍得福吧，哈哈，總之呢，自己的個人網站總算是生出來了，我希望日後我也能在這個部落格上分享一些自己的想法，也謝謝大家收看囉。</description>
     </item>
     
+    <item>
+      <title>SpringBoot課程筆記（一） Spring IoC</title>
+      <link>https://jimchien666.github.io/blog/springboot-1/</link>
+      <pubDate>Tue, 29 Oct 2019 10:07:47 +0600</pubDate>
+      
+      <guid>https://jimchien666.github.io/blog/springboot-1/</guid>
+      <description>IoC = Inversion of Control (控制反轉) 什麼是IoC呢？我們以印表機來舉個例子。
+假設這世界上只有Hp品牌的印表機，而學校的老師和同學們都需要一台印表機，這時我們會這麼寫
+public interface Printer { void print(String message); } public class HpPrinter implements Printer{ @Override public void print(String message){ System.</description>
+    </item>
+    
   </channel>
 </rss>
