@@ -5,7 +5,7 @@
 
   <!-- mobile responsive meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Spring IoC 與 DI 介紹及應用">
+  <meta name="description" content="學會游泳最快的方法，就是把你丟到海中央">
   <meta name="author" content="Jim Chien">
   <meta name="generator" content="Hugo 0.84.0" />
 
@@ -116,150 +116,21 @@
     <div class="row">
       <div class="col-lg-10 mx-auto">
         
-        <a href="/categories/springboot%e8%aa%b2%e7%a8%8b%e7%ad%86%e8%a8%98"
-          class="text-primary">Spring boot課程筆記</a>
+        <a href="/categories/%e8%81%b7%e6%b6%af"
+          class="text-primary">職涯</a>
         
-        <h2>SpringBoot課程筆記(一)</h2>
+        <h2>從實習到正職 我的爬蟲之路（二）</h2>
         <div class="mb-3 post-meta">
           <span>By Jim Chien</span>
           
           <span class="border-bottom border-primary px-2 mx-1"></span>
-          <span>2021-06-23</span>
+          <span>2021-06-20</span>
           
         </div>
         
         <div class="content mb-5">
           <hr>
-<h4 id="ioc--inversion-of-control-控制反轉">IoC = Inversion of Control (控制反轉)</h4>
-<p>什麼是IoC呢？我們以印表機來舉個例子。</p>
-<p>假設這世界上只有Hp品牌的印表機，而學校的老師和同學們都需要一台印表機，這時我們會這麼寫</p>
-<pre><code>public interface Printer {
-    void print(String message);
-}
-
-public class HpPrinter implements Printer{
-    @Override
-    public void print(String message){
-        System.out.println(&quot;HP印表機: &quot; + message);
-    }
-}
-
-public class Teacher {
-    private Printer printer = new HpPrinter();
-    public void teach(){
-        printer.print(&quot;I'm a teacher&quot;);
-    }
-}
-
-public class Student {
-    private Printer printer = new HpPrinter();
-    public void learn(){
-        printer.print(&quot;I'm a student&quot;);
-    }
-}
-</code></pre><p>這時老師跟學生都有一台印表機，且都能將自己的身份印出</p>
-<p>但這時，新的印表機品牌出現了</p>
-<pre><code>public class CanonPrinter implements Printer{
-    @Override
-    public void print(String message){
-        System.out.println(&quot;Canon印表機: &quot; + message);
-    }
-}
-</code></pre><p>這時候，如果老師跟學生都要統一換成新品牌時，我們必須改兩個地方，會造成一個困擾，假設我用10次，就要改10次，非常麻煩</p>
-<p>而學生跟老師只是需要一台印表機，並不在乎品牌．</p>
-<p>這時候呢spring出現了，他幫我們保管了印表機這個Object，而當有人需要使用印表機時，Spring就會提供他使用</p>
-<p>程式就變這樣</p>
-<pre><code>public class Teacher {
-    private Printer;
-    public void teach(){
-        printer.print(&quot;I'm a teacher&quot;);
-    }
-}
-
-public class Student {
-    private Printer;
-    public void learn(){
-        printer.print(&quot;I'm a student&quot;);
-    }
-}
-</code></pre><p>當程式啟動時，Spring會預先存放一台印表機object在Spring 容器內，而當老師或學生需要使用時，容器會提供給他們使用</p>
-<p>好了我們再回頭看IoC的定義</p>
-<p>原本印表幾的控制權教在Teacher和 Student手上，而利用Spring後，控制權轉交到Spring 容器手上</p>
-<p>由Spring 容器去new Object，這會帶來以下好處：</p>
-<ol>
-<li>
-<p>Loose coupling 鬆耦合</p>
-</li>
-<li>
-<p>Lifecycle Management生命週期管理</p>
-</li>
-<li>
-<p>More testable 方便測試</p>
-</li>
-</ol>
-<p>在我們了解SpringIoC觀念後，我們來講講如何將印表機交給Spring容器管理</p>
-<h4 id="component">@Component</h4>
-<ul>
-<li>
-<p>用法：只能加在class上</p>
-</li>
-<li>
-<p>用途：將該class變成Spring 容所管理的object</p>
-</li>
-</ul>
-<pre><code>@Component
-public class HpPrinter implements Printer{
-    @Override
-    public void print(String message){
-        System.out.println(&quot;HP印表機: &quot; + message);
-    }
-}
-</code></pre><p>這時再啟動Spring 程式時，Spring會提供一個Spring容器，並把有@Component註解的class new出一個object並存放在容器內，而這些被Spring容器創建並管理的Object，我們統稱為Bean。</p>
-<ul>
-<li>Bean的名稱為class name的第一個字母轉小寫</li>
-</ul>
-<p><img src="../../images/post/springboot-1-1.jpg" alt="image"></p>
-<h4 id="di--dependency-injection-依賴注入">DI = Dependency Injection (依賴注入)</h4>
-<p>我們已經成功將hpPrinter成功註冊到Spring容器內，接下來我們要讓Teacher和Student能夠取得這台hpPrinter</p>
-<p>有兩個步驟</p>
-<ol>
-<li>
-<p>將Teacher也變成Bean</p>
-</li>
-<li>
-<p>printer 上面加上@Autowired</p>
-</li>
-</ol>
-<pre><code>@Component
-public class Teacher {
-    @Autowired
-    private Printer printer;
-    public void teach(){
-        printer.print(&quot;I'm a teacher&quot;);
-    }
-}
-</code></pre><p>在printer上加上@Autowired，Spring就會將hpPrinter交給teacher，這個動作稱之為Dependency Injection(依賴注入)</p>
-<p>這時teacher就可以拿hpPrinter去印東西了。</p>
-<h4 id="總結">總結</h4>
-<p>IoC與DI相輔相成，IoC將object存放在容器裡面，而DI使Object可以取得其他Object來使用</p>
-<p>以下為Spring IoC 常見名詞：</p>
-<ul>
-<li>
-<p>IoC = Inversion of Control (控制反轉)</p>
-</li>
-<li>
-<p>DI = Dependency Injection (依賴注入)</p>
-</li>
-<li>
-<p>Bean = 存放在Spring容器裡的object</p>
-</li>
-<li>
-<p>@Component註解 = 加在class上，將該class變成Spring容器所管理的bean</p>
-</li>
-<li>
-<p>@Autowired註解 = 加在變數上，取得Spring容器中的Bean</p>
-</li>
-</ul>
+<p>2018年12月，我正式在科研市集實習，實習開始的第一天，老闆就公布了我這趟實習之旅的最終目標，上架實驗室五金分類，對，就是這麼簡單，但這看似簡單的任務，讓我頭痛半年。</p>
 
         </div>
 

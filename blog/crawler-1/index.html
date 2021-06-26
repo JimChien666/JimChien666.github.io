@@ -5,7 +5,7 @@
 
   <!-- mobile responsive meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Spring IoC 與 DI 介紹及應用">
+  <meta name="description" content="我的職涯道路第一站 成為蟲王前，先學會包貨！！">
   <meta name="author" content="Jim Chien">
   <meta name="generator" content="Hugo 0.84.0" />
 
@@ -116,150 +116,26 @@
     <div class="row">
       <div class="col-lg-10 mx-auto">
         
-        <a href="/categories/springboot%e8%aa%b2%e7%a8%8b%e7%ad%86%e8%a8%98"
-          class="text-primary">Spring boot課程筆記</a>
+        <a href="/categories/%e8%81%b7%e6%b6%af"
+          class="text-primary">職涯</a>
         
-        <h2>SpringBoot課程筆記(一)</h2>
+        <h2>從實習到正職 我的爬蟲之路（一）</h2>
         <div class="mb-3 post-meta">
           <span>By Jim Chien</span>
           
           <span class="border-bottom border-primary px-2 mx-1"></span>
-          <span>2021-06-23</span>
+          <span>2021-06-20</span>
           
         </div>
         
         <div class="content mb-5">
           <hr>
-<h4 id="ioc--inversion-of-control-控制反轉">IoC = Inversion of Control (控制反轉)</h4>
-<p>什麼是IoC呢？我們以印表機來舉個例子。</p>
-<p>假設這世界上只有Hp品牌的印表機，而學校的老師和同學們都需要一台印表機，這時我們會這麼寫</p>
-<pre><code>public interface Printer {
-    void print(String message);
-}
-
-public class HpPrinter implements Printer{
-    @Override
-    public void print(String message){
-        System.out.println(&quot;HP印表機: &quot; + message);
-    }
-}
-
-public class Teacher {
-    private Printer printer = new HpPrinter();
-    public void teach(){
-        printer.print(&quot;I'm a teacher&quot;);
-    }
-}
-
-public class Student {
-    private Printer printer = new HpPrinter();
-    public void learn(){
-        printer.print(&quot;I'm a student&quot;);
-    }
-}
-</code></pre><p>這時老師跟學生都有一台印表機，且都能將自己的身份印出</p>
-<p>但這時，新的印表機品牌出現了</p>
-<pre><code>public class CanonPrinter implements Printer{
-    @Override
-    public void print(String message){
-        System.out.println(&quot;Canon印表機: &quot; + message);
-    }
-}
-</code></pre><p>這時候，如果老師跟學生都要統一換成新品牌時，我們必須改兩個地方，會造成一個困擾，假設我用10次，就要改10次，非常麻煩</p>
-<p>而學生跟老師只是需要一台印表機，並不在乎品牌．</p>
-<p>這時候呢spring出現了，他幫我們保管了印表機這個Object，而當有人需要使用印表機時，Spring就會提供他使用</p>
-<p>程式就變這樣</p>
-<pre><code>public class Teacher {
-    private Printer;
-    public void teach(){
-        printer.print(&quot;I'm a teacher&quot;);
-    }
-}
-
-public class Student {
-    private Printer;
-    public void learn(){
-        printer.print(&quot;I'm a student&quot;);
-    }
-}
-</code></pre><p>當程式啟動時，Spring會預先存放一台印表機object在Spring 容器內，而當老師或學生需要使用時，容器會提供給他們使用</p>
-<p>好了我們再回頭看IoC的定義</p>
-<p>原本印表幾的控制權教在Teacher和 Student手上，而利用Spring後，控制權轉交到Spring 容器手上</p>
-<p>由Spring 容器去new Object，這會帶來以下好處：</p>
-<ol>
-<li>
-<p>Loose coupling 鬆耦合</p>
-</li>
-<li>
-<p>Lifecycle Management生命週期管理</p>
-</li>
-<li>
-<p>More testable 方便測試</p>
-</li>
-</ol>
-<p>在我們了解SpringIoC觀念後，我們來講講如何將印表機交給Spring容器管理</p>
-<h4 id="component">@Component</h4>
-<ul>
-<li>
-<p>用法：只能加在class上</p>
-</li>
-<li>
-<p>用途：將該class變成Spring 容所管理的object</p>
-</li>
-</ul>
-<pre><code>@Component
-public class HpPrinter implements Printer{
-    @Override
-    public void print(String message){
-        System.out.println(&quot;HP印表機: &quot; + message);
-    }
-}
-</code></pre><p>這時再啟動Spring 程式時，Spring會提供一個Spring容器，並把有@Component註解的class new出一個object並存放在容器內，而這些被Spring容器創建並管理的Object，我們統稱為Bean。</p>
-<ul>
-<li>Bean的名稱為class name的第一個字母轉小寫</li>
-</ul>
-<p><img src="../../images/post/springboot-1-1.jpg" alt="image"></p>
-<h4 id="di--dependency-injection-依賴注入">DI = Dependency Injection (依賴注入)</h4>
-<p>我們已經成功將hpPrinter成功註冊到Spring容器內，接下來我們要讓Teacher和Student能夠取得這台hpPrinter</p>
-<p>有兩個步驟</p>
-<ol>
-<li>
-<p>將Teacher也變成Bean</p>
-</li>
-<li>
-<p>printer 上面加上@Autowired</p>
-</li>
-</ol>
-<pre><code>@Component
-public class Teacher {
-    @Autowired
-    private Printer printer;
-    public void teach(){
-        printer.print(&quot;I'm a teacher&quot;);
-    }
-}
-</code></pre><p>在printer上加上@Autowired，Spring就會將hpPrinter交給teacher，這個動作稱之為Dependency Injection(依賴注入)</p>
-<p>這時teacher就可以拿hpPrinter去印東西了。</p>
-<h4 id="總結">總結</h4>
-<p>IoC與DI相輔相成，IoC將object存放在容器裡面，而DI使Object可以取得其他Object來使用</p>
-<p>以下為Spring IoC 常見名詞：</p>
-<ul>
-<li>
-<p>IoC = Inversion of Control (控制反轉)</p>
-</li>
-<li>
-<p>DI = Dependency Injection (依賴注入)</p>
-</li>
-<li>
-<p>Bean = 存放在Spring容器裡的object</p>
-</li>
-<li>
-<p>@Component註解 = 加在class上，將該class變成Spring容器所管理的bean</p>
-</li>
-<li>
-<p>@Autowired註解 = 加在變數上，取得Spring容器中的Bean</p>
-</li>
-</ul>
+<p>2018年５月距離我畢業只剩一個月的時間，那時的我感到十分焦慮，延畢一年的我，身邊的同學有的已經出社會，有的在當兵，也有人去念研究所，而我卻對未來毫無方向。</p>
+<p>再一次球聚中，我的高中同學阿軒分享著他在新創公司的經歷，當時的他從準備當兵時在裡面當小編，後來轉為數據分析實習，他述說著自己正在遭遇怎麼樣的困難，雖然他嘴上訴說著苦惱，但他的語氣透露初出社會的那種衝勁，於是當天我便詢問他有沒有機會也到那家公司做事，當時我也希望能夠做數據分析相關工作，畢竟我也是念數學的嘛～過了幾天，他跟我說，公司剛好缺理貨人員，想不想進來試試看，我心想，雖然不是做最想要的數據分析，但這段期間我也沒事做，先進去卡位，表現良好說不定有機會能夠被掉職位之類的？於是我就開始我的打工之旅。</p>
+<p>第一天上班，當時五月底，我騎車到公司門口，懷著緊張的心打給阿軒，結果下來的不只阿軒，還有一位同事小芳，看得出是一位經歷豐富，又不失美貌的前輩，看到他們我趕緊上前打聲招呼，他們則回應我他們正要去買早餐，約我一同前往，我心想，哇～新創公司都這麼自由的嗎？頓時緊張的心也減了不少，原來當時老闆正在美國，所以大家都過的比較舒適。</p>
+<p>買完早餐後，我們回到公司，小芳跟我介紹我的共事夥伴BB，他在這邊也做了一段時間，而將來，我就是要跟他一起包貨，直到我去當兵，我對他的第一印象，就是他非常會利用時間，他會利用空檔時間玩手遊，但他的做事效率也是一絕，所以我其實並不在意他玩手遊，因為他真的有本事玩&hellip;,而在他身上我也學到很多包貨技巧，例如印發票時一次印完再跟著出貨單一次包到信封中，貨先分類好在隨著出貨單放進出貨箱中等等的出貨技巧，他會盡可能地把事情盡快處理掉，而我也就緊隨他的步伐，漸漸我的速度也跟上他了，我們甚至從平行的工作方式，改成合作模式，他負責印發票、出貨單、包箱子，我負責點貨、放貨、封箱。這中間，我完成一些里程碑，從學會自己一個人完成所有理貨，包含點貨，分貨，包貨到送貨，到一天內包完40件貨，這些成就都在我日後回想起來特別開心。</p>
+<p>當然，我也遇到過包錯貨的情況，有一次客服接到電話，說客人收到一箱燒杯，但他只訂一個，我心想完了，我出大事了，結果確認後，客人直接說那我買一箱，就不退貨了，讓我鬆一口氣，謝謝你，客人。那段期間，我也到處送貨，開著老闆的百萬名車，到處征戰，其實那段時間非常快樂，體驗很多不同的事情，例如有的公司在巷子內，開車進去要倒車出來的。有一次自己去核能所，結果要回去時，不知為啥車子的方向盤鎖住，我差點撞牆。又或者是送貨到一半手機沒電，不記得路的我，找了個地方充電才能回去，還有一次是我跟送貨司機一起去核能所，到了目的地後，司機說不幫忙搬，我就搬了兩車的東西，上三樓。最精彩的一次是大家在公司看球賽，我們訂了PIZZA，我當天也負責當跑腿的，一樣開著百萬名車出門，但這次我出事了，我撞了老闆的百萬名車，當時的心情真的是不可言喻，還記得當時撞下去的當下，我都忘記油門跟煞車分別是哪個，腦袋一片空白，但當時老闆完全不跟我計較，也讓我感激在心。</p>
+<p>兩個多月的時間過得非常快，終於我收到兵單了，收到兵單的那時我有點不捨，因為不知道當完兵之後還有沒有機會回來，前情提要一下，其實這段時間我已經開始在學習爬蟲了，也有意無意的有跟公司同事，老闆提及這件事。果然，在我準備離開的前兩天，老闆找我私聊，跟我提議在我當完兵時是否有意願回來做實習，為公司寫爬蟲，對！沒錯，爬蟲之旅現在才要開始，於是我收著這份口頭合約，開開心心地迎接當兵之旅。</p>
 
         </div>
 

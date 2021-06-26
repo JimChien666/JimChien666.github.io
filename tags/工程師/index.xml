@@ -6,7 +6,16 @@
     <description>Recent content in 工程師 on JimChien</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Sat, 19 Jun 2021 10:07:47 +0600</lastBuildDate><atom:link href="https://jimchien666.github.io/tags/%E5%B7%A5%E7%A8%8B%E5%B8%AB/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 26 Jun 2021 10:07:47 +0600</lastBuildDate><atom:link href="https://jimchien666.github.io/tags/%E5%B7%A5%E7%A8%8B%E5%B8%AB/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Vue搭配springboot實作axios在前端新增一本書，讓後端接到值</title>
+      <link>https://jimchien666.github.io/blog/post-2/</link>
+      <pubDate>Sat, 26 Jun 2021 10:07:47 +0600</pubDate>
+      
+      <guid>https://jimchien666.github.io/blog/post-2/</guid>
+      <description>前端頁面是以Vue實作，表格欄位配置如下 &amp;lt;div class=&amp;quot;addBook&amp;quot; :style=&amp;quot;displayBlock&amp;quot;&amp;gt; &amp;lt;button @click=&amp;quot;postBook()&amp;quot;&amp;gt;新增&amp;lt;/button&amp;gt;&amp;lt;span&amp;gt;{{responseMessage}}&amp;lt;/span&amp;gt; &amp;lt;div&amp;gt; &amp;lt;div&amp;gt;書名&amp;lt;input type=&amp;quot;text&amp;quot; v-model=&amp;quot;newBook.</description>
+    </item>
+    
     <item>
       <title>個人網站的誕生</title>
       <link>https://jimchien666.github.io/blog/post-1/</link>
