@@ -17,17 +17,6 @@
     </item>
     
     <item>
-      <title>SpringBoot課程筆記(二)</title>
-      <link>https://jimchien666.github.io/blog/springboot-2/</link>
-      <pubDate>Wed, 23 Jun 2021 12:07:47 +0600</pubDate>
-      
-      <guid>https://jimchien666.github.io/blog/springboot-2/</guid>
-      <description>Bean注入 前面有先提到@Autowired註解，他會依據變數的類型，去Spring容器中尋有沒有符合類型的Bean
-因為hpPrinter implement Printer 這個 interface ，因此，Spring容器會將hpPrinter這個Bean，注入到Teacher裡。
-若這時Spring容器的Printer改成canonPrinter這個Bean，注入到Teacher的就會是canonPrinter。</description>
-    </item>
-    
-    <item>
       <title>SpringBoot課程筆記(一)</title>
       <link>https://jimchien666.github.io/blog/springboot-1/</link>
       <pubDate>Wed, 23 Jun 2021 10:07:47 +0600</pubDate>
@@ -50,15 +39,6 @@ public interface Printer { void print(String message); } public class HpPrinter 
 買完早餐後，我們回到公司，小芳跟我介紹我的共事夥伴BB，他在這邊也做了一段時間，而將來，我就是要跟他一起包貨，直到我去當兵，我對他的第一印象，就是他非常會利用時間，他會利用空檔時間玩手遊，但他的做事效率也是一絕，所以我其實並不在意他玩手遊，因為他真的有本事玩&amp;hellip;,而在他身上我也學到很多包貨技巧，例如印發票時一次印完再跟著出貨單一次包到信封中，貨先分類好在隨著出貨單放進出貨箱中等等的出貨技巧，他會盡可能地把事情盡快處理掉，而我也就緊隨他的步伐，漸漸我的速度也跟上他了，我們甚至從平行的工作方式，改成合作模式，他負責印發票、出貨單、包箱子，我負責點貨、放貨、封箱。這中間，我完成一些里程碑，從學會自己一個人完成所有理貨，包含點貨，分貨，包貨到送貨，到一天內包完40件貨，這些成就都在我日後回想起來特別開心。
 當然，我也遇到過包錯貨的情況，有一次客服接到電話，說客人收到一箱燒杯，但他只訂一個，我心想完了，我出大事了，結果確認後，客人直接說那我買一箱，就不退貨了，讓我鬆一口氣，謝謝你，客人。那段期間，我也到處送貨，開著老闆的百萬名車，到處征戰，其實那段時間非常快樂，體驗很多不同的事情，例如有的公司在巷子內，開車進去要倒車出來的。有一次自己去核能所，結果要回去時，不知為啥車子的方向盤鎖住，我差點撞牆。又或者是送貨到一半手機沒電，不記得路的我，找了個地方充電才能回去，還有一次是我跟送貨司機一起去核能所，到了目的地後，司機說不幫忙搬，我就搬了兩車的東西，上三樓。最精彩的一次是大家在公司看球賽，我們訂了PIZZA，我當天也負責當跑腿的，一樣開著百萬名車出門，但這次我出事了，我撞了老闆的百萬名車，當時的心情真的是不可言喻，還記得當時撞下去的當下，我都忘記油門跟煞車分別是哪個，腦袋一片空白，但當時老闆完全不跟我計較，也讓我感激在心。
 兩個多月的時間過得非常快，終於我收到兵單了，收到兵單的那時我有點不捨，因為不知道當完兵之後還有沒有機會回來，前情提要一下，其實這段時間我已經開始在學習爬蟲了，也有意無意的有跟公司同事，老闆提及這件事。果然，在我準備離開的前兩天，老闆找我私聊，跟我提議在我當完兵時是否有意願回來做實習，為公司寫爬蟲，對！沒錯，爬蟲之旅現在才要開始，於是我收著這份口頭合約，開開心心地迎接當兵之旅。</description>
-    </item>
-    
-    <item>
-      <title>從實習到正職 我的爬蟲之路（二）</title>
-      <link>https://jimchien666.github.io/blog/crawler-2/</link>
-      <pubDate>Sun, 20 Jun 2021 10:07:47 +0600</pubDate>
-      
-      <guid>https://jimchien666.github.io/blog/crawler-2/</guid>
-      <description>2018年12月，我正式在科研市集實習，實習開始的第一天，老闆就公布了我這趟實習之旅的最終目標，上架實驗室五金分類，對，就是這麼簡單，但這看似簡單的任務，讓我頭痛半年。</description>
     </item>
     
     <item>
