@@ -6,7 +6,18 @@
     <description>Recent content in SpringBoot課程筆記 on JimChien</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Wed, 23 Jun 2021 10:07:47 +0600</lastBuildDate><atom:link href="https://jimchien666.github.io/categories/springboot%E8%AA%B2%E7%A8%8B%E7%AD%86%E8%A8%98/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 23 Jun 2021 12:07:47 +0600</lastBuildDate><atom:link href="https://jimchien666.github.io/categories/springboot%E8%AA%B2%E7%A8%8B%E7%AD%86%E8%A8%98/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SpringBoot課程筆記(二)</title>
+      <link>https://jimchien666.github.io/blog/springboot-2/</link>
+      <pubDate>Wed, 23 Jun 2021 12:07:47 +0600</pubDate>
+      
+      <guid>https://jimchien666.github.io/blog/springboot-2/</guid>
+      <description>Bean注入 前面有先提到@Autowired註解，他會依據變數的類型，去Spring容器中尋有沒有符合類型的Bean
+因為hpPrinter implement Printer 這個 interface ，因此，Spring容器會將hpPrinter這個Bean，注入到Teacher裡。
+若這時Spring容器的Printer改成canonPrinter這個Bean，注入到Teacher的就會是canonPrinter。</description>
+    </item>
+    
     <item>
       <title>SpringBoot課程筆記(一)</title>
       <link>https://jimchien666.github.io/blog/springboot-1/</link>
