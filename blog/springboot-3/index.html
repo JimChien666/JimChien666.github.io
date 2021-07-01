@@ -5,7 +5,7 @@
 
   <!-- mobile responsive meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="This is meta description">
+  <meta name="description" content="Configuration&#43;Bean">
   <meta name="author" content="Jim Chien">
   <meta name="generator" content="Hugo 0.84.0" />
 
@@ -111,163 +111,97 @@
 </header>
 <!-- /navigation -->
 
-
 <section class="section-sm">
   <div class="container">
     <div class="row">
-      
-      <div class="col-lg-4 sideBox">
-  
-  <div class="widget">
-    
-    <h4 class="widget-title">About Me</h4>
-    
-    <img src="https://jimchien666.github.io/images/JimChien.jpg" alt=""
-      class="img-fluid author-thumb-sm d-block mx-auto rounded-circle mb-4">
-    
-    <p>我是簡佳恩, 目前在運籌網通 Toplogis擔任Java軟體工程師
-因為一個小小的夢想，而有了現在的我</p>
-    <a href="https://jimchien666.github.io/about/" class="btn btn-outline-primary">Know More</a>
-    
-  </div>
-  
-  <div class="widget">
-    <h4 class="widget-title">Category</h4>
-    <ul class="list-unstyled">
-      <li><a
-          href="/categories/springboot%e8%aa%b2%e7%a8%8b%e7%ad%86%e8%a8%98">Springboot課程筆記</a>
-      </li>
-      <li><a
-          href="/categories/%e5%bf%83%e5%be%97">心得</a>
-      </li>
-      <li><a
-          href="/categories/%e8%81%b7%e6%b6%af">職涯</a>
-      </li>
-    </ul>
-  </div>
-  
-  <div class="widget">
-    <h4 class="widget-title">Tag</h4>
-    <ul class="list-inline">
-      <li class="list-inline-item"><a
-          href="/tags/springboot">Springboot</a></li>
-      <li class="list-inline-item"><a
-          href="/tags/%e5%b7%a5%e4%bd%9c">工作</a></li>
-      <li class="list-inline-item"><a
-          href="/tags/%e5%b7%a5%e7%a8%8b%e5%b8%ab">工程師</a></li>
-      <li class="list-inline-item"><a
-          href="/tags/%e5%bf%83%e5%be%97">心得</a></li>
-    </ul>
-  </div>
-  
-  <div class="widget">
-    <h4 class="widget-title">Social</h4>
-    <ul class="list-inline social-links">
-      
-      <li class="list-inline-item bg-white text-primary"><a href="https://www.facebook.com/profile.php?id=100000258399533" class='bg-white text-primary'><i class="ti-facebook bg-white text-primary"></i></a></li>
-      
-      <li class="list-inline-item bg-white text-primary"><a href="https://twitter.com/JimChien6" class='bg-white text-primary'><i class="ti-twitter-alt bg-white text-primary"></i></a></li>
-      
-      <li class="list-inline-item bg-white text-primary"><a href="https://github.com/JimChien666/" class='bg-white text-primary'><i class="ti-github bg-white text-primary"></i></a></li>
-      
-    </ul>
-  </div>
-  
-</div>
+      <div class="col-lg-10 mx-auto">
+        
+        <a href="/categories/springboot%e8%aa%b2%e7%a8%8b%e7%ad%86%e8%a8%98"
+          class="text-primary">Spring boot課程筆記</a>
+        
+        <h2>SpringBoot課程筆記(三)</h2>
+        <div class="mb-3 post-meta">
+          <span>By Jim Chien</span>
+          
+          <span class="border-bottom border-primary px-2 mx-1"></span>
+          <span>2021-06-30</span>
+          
+        </div>
+        
+        <div class="content mb-5">
+          <hr>
+<h4 id="configuration">@Configuration</h4>
+<ul>
+<li>用法：只能加在class上</li>
+<li>用途：Spring中的設定用註解，表示這個class是拿來設定Spring用的</li>
+</ul>
+<pre><code>@Configuration
+public class MyConfiguraiotn(){
+    //設定Spring
+}
+</code></pre><p>spring Boot 啟動 -&gt; Spring去檢查class上的註解-&gt;</p>
+<ol>
+<li>Class上有 @Component 註解</li>
+<li>Class上有 @Configuration 註解</li>
+<li>Class上什麼註解都沒有(Spring容器不會理他)</li>
+</ol>
+<p>-&gt;啟動成功</p>
+<ul>
+<li>@component -&gt; 將此class變成一個由Spring容器所管理的Bean</li>
+<li>@Configuration -&gt; 將此class變成設定Spring用的class</li>
+</ul>
+<h4 id="bean">@Bean</h4>
+<ul>
+<li>用法：只能加在帶有@Configuration class的方法上</li>
+<li>用途：在Spring容器中創建一個bean</li>
+</ul>
+<pre><code>@Configuration
+public class MyConfiguraiotn(){
+    //設定Spring
 
-      
-      <div class="col-lg-8 mb-5 mb-lg-0">
-        <div class="row">
-          
-          
-          <div class="blogItem">
-    <article class="card">
-      
-      <div class="card-body px-0">
-        
-        <a href="https://jimchien666.github.io/tags/springboot/" class="h5 d-block my-3"><h3>SpringBoot</h3></a>
-        <div class="mb-3 post-meta">
-          <span>By Jim Chien</span>
-          
-          <span class="border-bottom border-primary px-2 mx-1"></span>
-          <span>0001-01-01</span>
-          
-        </div>
-        <p class="card-text"></p>
-        <a href="https://jimchien666.github.io/tags/springboot/" class="btn btn-outline-primary">read more</a>
-      </div>
-    </article>
-  </div>
-          
-          <div class="blogItem">
-    <article class="card">
-      
-      <div class="card-body px-0">
-        
-        <a href="https://jimchien666.github.io/tags/%E5%B7%A5%E7%A8%8B%E5%B8%AB/" class="h5 d-block my-3"><h3>工程師</h3></a>
-        <div class="mb-3 post-meta">
-          <span>By Jim Chien</span>
-          
-          <span class="border-bottom border-primary px-2 mx-1"></span>
-          <span>0001-01-01</span>
-          
-        </div>
-        <p class="card-text"></p>
-        <a href="https://jimchien666.github.io/tags/%E5%B7%A5%E7%A8%8B%E5%B8%AB/" class="btn btn-outline-primary">read more</a>
-      </div>
-    </article>
-  </div>
-          
-          <div class="blogItem">
-    <article class="card">
-      
-      <div class="card-body px-0">
-        
-        <a href="https://jimchien666.github.io/tags/%E5%B7%A5%E4%BD%9C/" class="h5 d-block my-3"><h3>工作</h3></a>
-        <div class="mb-3 post-meta">
-          <span>By Jim Chien</span>
-          
-          <span class="border-bottom border-primary px-2 mx-1"></span>
-          <span>0001-01-01</span>
-          
-        </div>
-        <p class="card-text"></p>
-        <a href="https://jimchien666.github.io/tags/%E5%B7%A5%E4%BD%9C/" class="btn btn-outline-primary">read more</a>
-      </div>
-    </article>
-  </div>
-          
-          <div class="blogItem">
-    <article class="card">
-      
-      <div class="card-body px-0">
-        
-        <a href="https://jimchien666.github.io/tags/%E5%BF%83%E5%BE%97/" class="h5 d-block my-3"><h3>心得</h3></a>
-        <div class="mb-3 post-meta">
-          <span>By Jim Chien</span>
-          
-          <span class="border-bottom border-primary px-2 mx-1"></span>
-          <span>0001-01-01</span>
-          
-        </div>
-        <p class="card-text"></p>
-        <a href="https://jimchien666.github.io/tags/%E5%BF%83%E5%BE%97/" class="btn btn-outline-primary">read more</a>
-      </div>
-    </article>
-  </div>
-          
-        </div>
-      </div>
-      
+    @Bean
+    public Printer myPrinter(){
+        return new HpPrinter();
+    }
+}
+</code></pre><p>這時Spring啟動時，Spring容器就會將HpPrinter new出來，取名為myPrinter。</p>
+<pre><code>@Configuration
+public class MyConfiguraiotn(){
+    //設定Spring
 
-      
-      <div class="col-12 mt-5">
+    @Bean(&quot;xxx&quot;)//這邊會優先當作bean的名稱
+    public Printer myPrinter(){
+        return new HpPrinter();
+    }
+}
+</code></pre>
+        </div>
+
         
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "jimchien666" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
       </div>
     </div>
   </div>
 </section>
-
 
 
 

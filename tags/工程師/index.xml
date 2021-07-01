@@ -6,7 +6,18 @@
     <description>Recent content in 工程師 on JimChien</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Sat, 26 Jun 2021 10:07:47 +0600</lastBuildDate><atom:link href="https://jimchien666.github.io/tags/%E5%B7%A5%E7%A8%8B%E5%B8%AB/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 30 Jun 2021 10:07:47 +0600</lastBuildDate><atom:link href="https://jimchien666.github.io/tags/%E5%B7%A5%E7%A8%8B%E5%B8%AB/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>104面試Codility</title>
+      <link>https://jimchien666.github.io/blog/interview-1/</link>
+      <pubDate>Wed, 30 Jun 2021 10:07:47 +0600</pubDate>
+      
+      <guid>https://jimchien666.github.io/blog/interview-1/</guid>
+      <description>前幾天投了104履歷，想看看自己在市場上還有沒有價值ＱＱ，然後在昨天時，收到104的一封信，是要先做一份類似小測驗，收到當下滿開心的，畢竟沒有發我無聲卡
+於是當天下班，我就很興奮地準備來寫這份小測驗，其中遇到一題滿有趣的，順手紀錄一下
+There are N bulbs, numbered from 1 to N, arranged in a row.</description>
+    </item>
+    
     <item>
       <title>Vue搭配springboot實作axios在前端新增一本書，讓後端接到值</title>
       <link>https://jimchien666.github.io/blog/post-2/</link>

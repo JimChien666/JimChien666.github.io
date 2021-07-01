@@ -6,7 +6,27 @@
     <description>Recent content in Blogs on JimChien</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Sat, 26 Jun 2021 10:07:47 +0600</lastBuildDate><atom:link href="https://jimchien666.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 30 Jun 2021 12:07:47 +0600</lastBuildDate><atom:link href="https://jimchien666.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SpringBoot課程筆記(三)</title>
+      <link>https://jimchien666.github.io/blog/springboot-3/</link>
+      <pubDate>Wed, 30 Jun 2021 12:07:47 +0600</pubDate>
+      
+      <guid>https://jimchien666.github.io/blog/springboot-3/</guid>
+      <description>@Configuration  用法：只能加在class上 用途：Spring中的設定用註解，表示這個class是拿來設定Spring用的  @Configuration public class MyConfiguraiotn(){ //設定Spring } spring Boot 啟動 -&amp;gt; Spring去檢查class上的註解-&amp;gt;</description>
+    </item>
+    
+    <item>
+      <title>104面試Codility</title>
+      <link>https://jimchien666.github.io/blog/interview-1/</link>
+      <pubDate>Wed, 30 Jun 2021 10:07:47 +0600</pubDate>
+      
+      <guid>https://jimchien666.github.io/blog/interview-1/</guid>
+      <description>前幾天投了104履歷，想看看自己在市場上還有沒有價值ＱＱ，然後在昨天時，收到104的一封信，是要先做一份類似小測驗，收到當下滿開心的，畢竟沒有發我無聲卡
+於是當天下班，我就很興奮地準備來寫這份小測驗，其中遇到一題滿有趣的，順手紀錄一下
+There are N bulbs, numbered from 1 to N, arranged in a row.</description>
+    </item>
+    
     <item>
       <title>Vue搭配springboot實作axios在前端新增一本書，讓後端接到值</title>
       <link>https://jimchien666.github.io/blog/post-2/</link>
@@ -22,7 +42,7 @@
       <pubDate>Wed, 23 Jun 2021 12:07:47 +0600</pubDate>
       
       <guid>https://jimchien666.github.io/blog/springboot-2/</guid>
-      <description>Bean注入 前面有先提到@Autowired註解，他會依據變數的類型，去Spring容器中尋有沒有符合類型的Bean
+      <description>Bean 前面有先提到@Autowired註解，他會依據變數的類型，去Spring容器中尋有沒有符合類型的Bean
 因為hpPrinter implement Printer 這個 interface ，因此，Spring容器會將hpPrinter這個Bean，注入到Teacher裡。
 若這時Spring容器的Printer改成canonPrinter這個Bean，注入到Teacher的就會是canonPrinter。</description>
     </item>
