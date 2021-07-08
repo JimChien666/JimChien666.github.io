@@ -8,6 +8,17 @@
     <language>zh-tw</language>
     <lastBuildDate>Sun, 20 Jun 2021 10:07:47 +0600</lastBuildDate><atom:link href="https://jimchien666.github.io/tags/%E5%BF%83%E5%BE%97/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Http協議筆記</title>
+      <link>https://jimchien666.github.io/blog/http/</link>
+      <pubDate>Sun, 20 Jun 2021 10:07:47 +0600</pubDate>
+      
+      <guid>https://jimchien666.github.io/blog/http/</guid>
+      <description>前端與後端必須遵守固定規則，而這個規則就是HTTP協議，規定前後端的溝通模式
+Http協議
+ 負責規定資料的傳輸格式，讓前端和後端能夠有效的進行資料溝通 可以分成 request 和 response 兩個部分 一次http溝通包含一次request和一次response  http分別對request和response有不同的格式要求</description>
+    </item>
+    
+    <item>
       <title>從實習到正職 我的爬蟲之路（一）</title>
       <link>https://jimchien666.github.io/blog/crawler-1/</link>
       <pubDate>Sun, 20 Jun 2021 10:07:47 +0600</pubDate>

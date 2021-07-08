@@ -5,7 +5,7 @@
 
   <!-- mobile responsive meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="This is meta description">
+  <meta name="description" content="Http協議筆記">
   <meta name="author" content="Jim Chien">
   <meta name="generator" content="Hugo 0.84.0" />
 
@@ -111,89 +111,15 @@
 </header>
 <!-- /navigation -->
 
-
 <section class="section-sm">
   <div class="container">
     <div class="row">
-      
-      <div class="col-lg-4 sideBox">
-  
-  <div class="widget">
-    
-    <h4 class="widget-title">About Me</h4>
-    
-    <img src="https://jimchien666.github.io/images/JimChien.jpg" alt=""
-      class="img-fluid author-thumb-sm d-block mx-auto rounded-circle mb-4">
-    
-    <p>我是簡佳恩, 目前在運籌網通 Toplogis擔任Java軟體工程師
-因為一個小小的夢想，而有了現在的我</p>
-    <a href="https://jimchien666.github.io/about/" class="btn btn-outline-primary">Know More</a>
-    
-  </div>
-  
-  <div class="widget">
-    <h4 class="widget-title">Category</h4>
-    <ul class="list-unstyled">
-      <li><a
-          href="/categories/springboot%e8%aa%b2%e7%a8%8b%e7%ad%86%e8%a8%98">Springboot課程筆記</a>
-      </li>
-      <li><a
-          href="/categories/%e5%ad%b8%e7%bf%92">學習</a>
-      </li>
-      <li><a
-          href="/categories/%e5%bf%83%e5%be%97">心得</a>
-      </li>
-      <li><a
-          href="/categories/%e8%81%b7%e6%b6%af">職涯</a>
-      </li>
-    </ul>
-  </div>
-  
-  <div class="widget">
-    <h4 class="widget-title">Tag</h4>
-    <ul class="list-inline">
-      <li class="list-inline-item"><a
-          href="/tags/springboot">Springboot</a></li>
-      <li class="list-inline-item"><a
-          href="/tags/%e5%b7%a5%e4%bd%9c">工作</a></li>
-      <li class="list-inline-item"><a
-          href="/tags/%e5%b7%a5%e7%a8%8b%e5%b8%ab">工程師</a></li>
-      <li class="list-inline-item"><a
-          href="/tags/%e5%bf%83%e5%be%97">心得</a></li>
-      <li class="list-inline-item"><a
-          href="/tags/%e7%ad%86%e8%a8%98">筆記</a></li>
-    </ul>
-  </div>
-  
-  <div class="widget">
-    <h4 class="widget-title">Social</h4>
-    <ul class="list-inline social-links">
-      
-      <li class="list-inline-item bg-white text-primary"><a href="https://www.facebook.com/profile.php?id=100000258399533" class='bg-white text-primary'><i class="ti-facebook bg-white text-primary"></i></a></li>
-      
-      <li class="list-inline-item bg-white text-primary"><a href="https://twitter.com/JimChien6" class='bg-white text-primary'><i class="ti-twitter-alt bg-white text-primary"></i></a></li>
-      
-      <li class="list-inline-item bg-white text-primary"><a href="https://github.com/JimChien666/" class='bg-white text-primary'><i class="ti-github bg-white text-primary"></i></a></li>
-      
-    </ul>
-  </div>
-  
-</div>
-
-      
-      <div class="col-lg-8 mb-5 mb-lg-0">
-        <div class="row">
-          
-          
-          <div class="blogItem">
-    <article class="card">
-      
-      <div class="card-body px-0">
+      <div class="col-lg-10 mx-auto">
         
         <a href="/categories/%e5%ad%b8%e7%bf%92"
           class="text-primary">學習</a>
         
-        <a href="https://jimchien666.github.io/blog/http/" class="h5 d-block my-3"><h3>Http協議筆記</h3></a>
+        <h2>Http協議筆記</h2>
         <div class="mb-3 post-meta">
           <span>By Jim Chien</span>
           
@@ -201,46 +127,67 @@
           <span>2021-06-20</span>
           
         </div>
-        <p class="card-text">Http協議筆記</p>
-        <a href="https://jimchien666.github.io/blog/http/" class="btn btn-outline-primary">read more</a>
-      </div>
-    </article>
-  </div>
-          
-          <div class="blogItem">
-    <article class="card">
-      
-      <div class="card-body px-0">
         
-        <a href="/categories/%e8%81%b7%e6%b6%af"
-          class="text-primary">職涯</a>
-        
-        <a href="https://jimchien666.github.io/blog/crawler-1/" class="h5 d-block my-3"><h3>從實習到正職 我的爬蟲之路（一）</h3></a>
-        <div class="mb-3 post-meta">
-          <span>By Jim Chien</span>
-          
-          <span class="border-bottom border-primary px-2 mx-1"></span>
-          <span>2021-06-20</span>
-          
-        </div>
-        <p class="card-text">我的職涯道路第一站 成為蟲王前，先學會包貨！！</p>
-        <a href="https://jimchien666.github.io/blog/crawler-1/" class="btn btn-outline-primary">read more</a>
-      </div>
-    </article>
-  </div>
-          
-        </div>
-      </div>
-      
+        <div class="content mb-5">
+          <hr>
+<p>前端與後端必須遵守固定規則，而這個規則就是HTTP協議，規定前後端的溝通模式</p>
+<p>Http協議</p>
+<ul>
+<li>負責規定資料的傳輸格式，讓前端和後端能夠有效的進行資料溝通</li>
+<li>可以分成 request 和 response 兩個部分</li>
+<li>一次http溝通包含一次request和一次response</li>
+</ul>
+<p>http分別對request和response有不同的格式要求</p>
+<h4 id="http-request">http Request:</h4>
+<ul>
+<li>http method(請求方式)</li>
+<li>url</li>
+<li>request header</li>
+<li>request body</li>
+</ul>
+<p>http method(請求方式):
+分成: GET,POST,PUT,DELETE&hellip;
+url:
+請求網址</p>
+<p>request header:
+cookie, sessionId, user-agent</p>
+<p>cookie:使用者端
+session:server端</p>
+<p>request body:
+form data</p>
+<h4 id="http-response">http Response:</h4>
+<p>status code(狀態碼): 200, 404, 500&hellip;
+response header:
+content-type</p>
+<p>response body</p>
 
-      
-      <div class="col-12 mt-5">
+        </div>
+
         
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "jimchien666" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
       </div>
     </div>
   </div>
 </section>
-
 
 
 
