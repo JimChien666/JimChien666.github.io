@@ -2,44 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on JimChien</title>
-    <link>https://jimchien666.github.io/categories/</link>
+    <link>https://demo.gethugothemes.com/categories/</link>
     <description>Recent content in Categories on JimChien</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Wed, 30 Jun 2021 12:07:47 +0600</lastBuildDate><atom:link href="https://jimchien666.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 30 Jun 2021 10:07:47 +0600</lastBuildDate><atom:link href="https://demo.gethugothemes.com/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>SpringBoot課程筆記</title>
-      <link>https://jimchien666.github.io/categories/springboot%E8%AA%B2%E7%A8%8B%E7%AD%86%E8%A8%98/</link>
-      <pubDate>Wed, 30 Jun 2021 12:07:47 +0600</pubDate>
-      
-      <guid>https://jimchien666.github.io/categories/springboot%E8%AA%B2%E7%A8%8B%E7%AD%86%E8%A8%98/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>心得</title>
-      <link>https://jimchien666.github.io/categories/%E5%BF%83%E5%BE%97/</link>
+      <title>面試</title>
+      <link>https://demo.gethugothemes.com/categories/%E9%9D%A2%E8%A9%A6/</link>
       <pubDate>Wed, 30 Jun 2021 10:07:47 +0600</pubDate>
       
-      <guid>https://jimchien666.github.io/categories/%E5%BF%83%E5%BE%97/</guid>
+      <guid>https://demo.gethugothemes.com/categories/%E9%9D%A2%E8%A9%A6/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>學習</title>
-      <link>https://jimchien666.github.io/categories/%E5%AD%B8%E7%BF%92/</link>
-      <pubDate>Sun, 20 Jun 2021 10:07:47 +0600</pubDate>
+      <title>Java</title>
+      <link>https://demo.gethugothemes.com/categories/java/</link>
+      <pubDate>Tue, 29 Oct 2019 10:07:47 +0600</pubDate>
       
-      <guid>https://jimchien666.github.io/categories/%E5%AD%B8%E7%BF%92/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>職涯</title>
-      <link>https://jimchien666.github.io/categories/%E8%81%B7%E6%B6%AF/</link>
-      <pubDate>Sun, 20 Jun 2021 10:07:47 +0600</pubDate>
-      
-      <guid>https://jimchien666.github.io/categories/%E8%81%B7%E6%B6%AF/</guid>
+      <guid>https://demo.gethugothemes.com/categories/java/</guid>
       <description></description>
     </item>
     
