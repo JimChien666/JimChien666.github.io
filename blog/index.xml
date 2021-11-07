@@ -10,7 +10,7 @@
     <item>
       <title>串流加密法(Stream ciphers)</title>
       <link>https://jimchien666.github.io/blog/crypto2/</link>
-      <pubDate>Sat, 30 Oct 2021 10:07:47 +0600</pubDate>
+      <pubDate>Sat, 06 Nov 2021 10:07:47 +0600</pubDate>
       
       <guid>https://jimchien666.github.io/blog/crypto2/</guid>
       <description>上次我們說完 OTP，這次我們來說說讓 OTP 更能更實際應用的方法，也就是串流加密法。
