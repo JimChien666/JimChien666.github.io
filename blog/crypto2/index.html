@@ -134,7 +134,12 @@ D(k, c) := c ⊕ G(k)
 <p>所以如果 G:K-&gt;{0, 1}^n 是可預測的，則</p>
 <pre tabindex="0"><code>∃ &quot;efficient alg.&quot; A and ∃ 1 ≤ i ≤ n-1 s.t. 
 choose a ramdon k ∈ K , Pr[A(G(k))|1,...,i = G(k)|i+1] ≥ 1/2 + ε (ε ≥ 1/2^30)
-</code></pre><p>定義:
+</code></pre><p>note. 可不可忽略(Negligible and non-negligible)</p>
+<ul>
+<li>ε ≥ 1/2^30 不可忽略(可能發生在 1GB 大小之中)</li>
+<li>ε ≥ 1/2^80 可忽略</li>
+</ul>
+<p>定義:
 PRG is unpredictable if it is not predictable</p>
 <pre tabindex="0"><code>=&gt; ∀i: no &quot;eff&quot; adv. can predict bit (i + 1) for &quot;non-neg&quot; ε
 </code></pre><h3 id="不好的-prgs">不好的 PRGs</h3>
