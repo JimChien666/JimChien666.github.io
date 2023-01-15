@@ -1,0 +1,117 @@
+<!doctype html><html lang=zh-tw><head>
+<meta charset=utf-8>
+<title>JimChien</title>
+<meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1">
+<meta name=description content="單體式系統介紹">
+<meta name=author content="Jim Chien">
+<meta name=generator content="Hugo 0.88.1">
+<link rel=stylesheet href=https://jimchien666.github.io/plugins/bootstrap/bootstrap.min.css>
+<link rel=stylesheet href=https://jimchien666.github.io/plugins/slick/slick.css>
+<link rel=stylesheet href=https://jimchien666.github.io/plugins/themify-icons/themify-icons.css>
+<link rel=stylesheet href=https://jimchien666.github.io/plugins/venobox/venobox.css>
+<link rel=stylesheet href=https://jimchien666.github.io/scss/style.min.css media=screen>
+<link rel="shortcut icon" href=https://jimchien666.github.io/images/favicon.png type=image/x-icon>
+<link rel=icon href=https://jimchien666.github.io/images/favicon.png type=image/x-icon>
+<script>(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b,a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,d.parentNode.insertBefore(c,d)})(window,document,'script','//www.google-analytics.com/analytics.js','ga'),ga('create','Your ID','auto'),ga('send','pageview')</script>
+</head><body>
+<div class=preloader>
+</div>
+<header class=navigation style="box-shadow:5px 5px 5px #918f8f">
+<div class=container>
+<nav class="navbar navbar-expand-lg navbar-white bg-transparent border-bottom pl-0">
+<a class="navbar-brand desktop-view text-primary" href=https://jimchien666.github.io/>Jim部落格</a>
+<div style=width:60%></div>
+<ul class=navbar-nav>
+<li class=nav-item>
+<a class=nav-link href=https://jimchien666.github.io/blog>文章</a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=https://jimchien666.github.io/booklist>讀書清單</a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=https://jimchien666.github.io/>關於我</a>
+</li>
+</ul>
+<div class="search pl-lg-4" style=float:right>
+<button id=searchOpen class=search-btn><i class=ti-search></i></button>
+<div class=search-wrapper>
+<form action=https://jimchien666.github.io//search class=h-100>
+<input class="search-box px-4" id=search-query name=s type=search placeholder="Type & Hit Enter...">
+</form>
+<button id=searchClose class=search-close><i class="ti-close text-dark"></i></button>
+</div>
+</div>
+</nav>
+</div>
+</header>
+<section class=section-sm>
+<div class=container>
+<div class=row>
+<div class="col-lg-10 mx-auto">
+<h2>單體式系統介紹</h2>
+<div class="mb-3 post-meta">
+<span>By Jim Chien</span>
+<span class="border-bottom border-primary px-2 mx-1"></span>
+<span>2023/01/14</span>
+</div>
+<hr>
+<div class="content mb-5">
+<h1 id=單體式系統>單體式系統</h1>
+<p>微服務常常被描述成是單體式架構的替代方案，因此在了解微服務的架構之前，我們應該要先了解單體式系統(monolith)是什麼東西。</p>
+<p>首先，要先了解什麼是<code>單體</code>，單體可以把它理解為是一個部署單位。</p>
+<p><img src=../../images/post/single-process-1.png alt=image></p>
+<p>也就是說系統中的功能需要同時被部署，那他就可以視為一個<code>單體</code>。那在單體式的架構中，我們可以把他分成幾種類型:</p>
+<ul>
+<li>單行程單體</li>
+<li>模組化單體</li>
+<li>分散式單體</li>
+</ul>
+<h2 id=單體式的種類>單體式的種類</h2>
+<h3 id=單行程單體>單行程單體</h3>
+<p>當談到單體式應用時，最常見的一種類型就是單行程單體，這種類型的架構，此種架構下，從資料庫取資料，到畫面呈現，很有可能都被包在同一個 Controller 中，遵從傳統的 MVC 架構。</p>
+<p><img src=../../images/post/single-process-2.png alt=image></p>
+<p>此種架構之下對於較小的組織及應用程式是一個不錯的選擇，但隨著應用程式的成長，我們可能需要將它模組化。</p>
+<h3 id=模組化單體>模組化單體</h3>
+<p>模組化單體是單行程單體的一種變化，在此應用程式下，我們將不同的功能拆分為不同的模組，各個模組相互獨立，但仍須一同部署。</p>
+<p><img src=../../images/post/single-process-3.png alt=image></p>
+<p>對於許多團隊來說，模組化單體是一個不錯的選擇，只要各個模組邊界定義明確，在團隊上的分工會有很好的幫助。</p>
+<p>不過，轉變為模組化單體後，可能會面臨一項挑戰，就是各個模組間，會有共用資料庫的情況，在這個情況之下，未來想將這一整個單體拆分為不同單體時，可能會帶來許多困難，因此在區分模組的同時，也可以將不同模組間應用到的資料庫區分開來。</p>
+<p><img src=../../images/post/single-process-4.png alt=image></p>
+<p>當產品不斷成長，單體越漲越大，相對團隊的規模也越來越大，在此情況下，我們可能會像區分不同團隊來管理不同的單體，以網路書店來說，我們可能會想將團隊分成網頁版團隊及 APP 版團隊，他們各自維護不同的單體。</p>
+<p>這時會面臨一個問題，這些單體也許服務的內容非常相似，這時我們可能需要使用一套方法或著是使用一種架構，來解決目前遇到的問題。</p>
+<h3 id=服務導向架構soa>服務導向架構(SOA)</h3>
+<p>服務導向架構他是一種設計方法，我們提供一個服務，這個服務是一個完全獨立於任何單體的獨自個體，這個服務提供單體應用程式他們所需要的方法，而當單體需要使用服務中的方法時，需要透過網路進行呼叫，當然，這個服務不僅限於一個單體使用。</p>
+<p><img src=../../images/post/single-process-5.png alt=image></p>
+<p>SOA 固然是個很好的方法，但很有可能在實作的過程中，出現了一些問題，導致我們的應用程式變成了我們不想看到的樣子，分散式單體。</p>
+<h3 id=分散式單體>分散式單體</h3>
+<p>分散式單體可能有著 SOA 的樣子，看似是有多個服務組成的系統，實質上整個系統必須同時部署，導致他成為一個單體。</p>
+<p><img src=../../images/post/single-process-6.png alt=image></p>
+<h2 id=單體式的優缺點>單體式的優缺點</h2>
+<p>單體式系統有許多優點，例如易於部署在分散式系統之中​，易於共用程式碼​，易於監控，故障排除​等等。
+當然也有一些缺點，例如競爭交付​，若無明確模組邊界，容易造成程式閱讀困難​，等等。</p>
+</div>
+<div id=disqus_thread></div>
+<script type=application/javascript>var disqus_config=function(){};(function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById('disqus_thread').innerHTML='Disqus comments not available by default when the website is previewed locally.';return}var b=document,a=b.createElement('script');a.async=!0,a.src='//jimchien666.disqus.com/embed.js',a.setAttribute('data-timestamp',+new Date),(b.head||b.body).appendChild(a)})()</script>
+<noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript>
+<a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a>
+</div>
+</div>
+</div>
+</section>
+<footer class=text-capitalize>
+<div class=container>
+<div class="row justify-content-center">
+</div>
+</div>
+</footer>
+<script>var indexURL="https://jimchien666.github.io/index.json"</script>
+<script src=https://jimchien666.github.io/plugins/jQuery/jquery.min.js></script>
+<script src=https://jimchien666.github.io/plugins/bootstrap/bootstrap.min.js></script>
+<script src=https://jimchien666.github.io/plugins/slick/slick.min.js></script>
+<script src=https://jimchien666.github.io/plugins/venobox/venobox.min.js></script>
+<script src=https://jimchien666.github.io/plugins/search/fuse.min.js></script>
+<script src=https://jimchien666.github.io/plugins/search/mark.js></script>
+<script src=https://jimchien666.github.io/plugins/search/search.js></script>
+<script src=https://jimchien666.github.io/js/script.min.js></script>
+</body>
+</html>
